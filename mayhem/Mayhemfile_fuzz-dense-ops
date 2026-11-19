@@ -1,0 +1,9 @@
+project: savantenvs/USearch
+target: fuzz-dense-ops
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-dense-ops/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_dense_ops
+    libfuzzer: true
+    timeout: 10

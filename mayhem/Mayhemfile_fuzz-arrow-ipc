@@ -1,0 +1,9 @@
+project: savantenvs/USearch
+target: fuzz-arrow-ipc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-arrow-ipc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_arrow_ipc
+    libfuzzer: true
+    timeout: 10

@@ -1,0 +1,9 @@
+project: savantenvs/USearch
+target: fuzz-shapes-load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-shapes-load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_shapes_load
+    libfuzzer: true
+    timeout: 10

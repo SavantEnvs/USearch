@@ -1,0 +1,9 @@
+project: savantenvs/USearch
+target: fuzz-geospatial-view
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz-geospatial-view/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_geospatial_view
+    libfuzzer: true
+    timeout: 10
